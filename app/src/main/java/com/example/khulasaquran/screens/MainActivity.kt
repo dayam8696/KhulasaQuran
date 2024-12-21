@@ -1,4 +1,4 @@
-package com.example.khulasaquran
+package com.example.khulasaquran.screens
 
 import android.os.Bundle
 import androidx.activity.ComponentActivity
