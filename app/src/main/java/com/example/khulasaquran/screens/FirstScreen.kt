@@ -28,7 +28,7 @@ fun FirstScreen(navController: NavController) {
         modifier = Modifier
             .fillMaxSize()
             .background(color = Color(0xFF2C200A))
-            .padding(4.dp)
+            .padding(2.dp)
     ) {
         Image(
             painter = painterResource(R.drawable.home_image),
