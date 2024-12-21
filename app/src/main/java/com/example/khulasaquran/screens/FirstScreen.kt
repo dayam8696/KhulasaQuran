@@ -83,11 +83,5 @@ fun FirstScreen(navController: NavController) {
 
 
 
-//@Preview(showBackground = true)
-//@Composable
-//fun PreviewFirstScreen() {
-//    FirstScreen()
-//}
-
 
 
