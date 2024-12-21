@@ -19,12 +19,13 @@ import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
+import androidx.navigation.NavController
 import com.example.khulasaquran.R
 
 @Composable
-fun FirstScreen(modifier: Modifier = Modifier) {
+fun FirstScreen(navController: NavController) {
     Column(
-        modifier = modifier
+        modifier = Modifier
             .fillMaxSize()
             .background(color = Color(0xFF2C200A))
             .padding(2.dp)
@@ -49,7 +50,7 @@ fun FirstScreen(modifier: Modifier = Modifier) {
                 .align(Alignment.CenterHorizontally),
 
 
-            onClick = {}
+            onClick = {navController.navigate("para_screen")}
         ) {
             Text(
                 text = "START",
@@ -80,11 +81,13 @@ fun FirstScreen(modifier: Modifier = Modifier) {
     }
 }
 
-@Preview(showBackground = true)
-@Composable
-fun PreviewFirstScreen() {
-    FirstScreen()
-}
+
+
+//@Preview(showBackground = true)
+//@Composable
+//fun PreviewFirstScreen() {
+//    FirstScreen()
+//}
 
 
 

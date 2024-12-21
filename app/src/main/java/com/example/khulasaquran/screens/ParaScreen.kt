@@ -19,9 +19,10 @@ import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import androidx.navigation.NavController
 
 @Composable
-fun ParaScreen() {
+fun ParaScreen(navController: NavController) {
     Column(
         Modifier
             .background(color = Color(0xFF968B76))
@@ -62,8 +63,8 @@ fun ParaItem(title : String) {
     }
 }
 
-@Preview(showBackground = true)
-@Composable
-fun ParaScreenPreview(){
-    ParaScreen()
-}
+//@Preview(showBackground = true)
+//@Composable
+//fun ParaScreenPreview(){
+//    ParaScreen()
+//}
