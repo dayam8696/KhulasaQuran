@@ -20,8 +20,7 @@ class MainActivity : ComponentActivity() {
         setContent {
             KhulasaQuranTheme {
                 Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
-                    Greeting(
-                        name = "Android",
+                    FirstScreen(
                         modifier = Modifier.padding(innerPadding)
                     )
                 }
@@ -30,18 +29,4 @@ class MainActivity : ComponentActivity() {
     }
 }
 
-@Composable
-fun Greeting(name: String, modifier: Modifier = Modifier) {
-    Text(
-        text = "Hi $name!",
-        modifier = modifier
-    )
-}
 
-@Preview(showBackground = true)
-@Composable
-fun GreetingPreview() {
-    KhulasaQuranTheme {
-        Greeting("Android")
-    }
-}
