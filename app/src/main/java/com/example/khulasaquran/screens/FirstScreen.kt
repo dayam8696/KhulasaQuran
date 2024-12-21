@@ -3,13 +3,16 @@ package com.example.khulasaquran.screens
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
+import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.material3.Button
 import androidx.compose.material3.ButtonColors
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
+import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.layout.ContentScale
@@ -23,7 +26,7 @@ fun FirstScreen(modifier: Modifier = Modifier) {
     Column(
         modifier = modifier
             .fillMaxSize()
-            .background(color = Color(0xFF2F1E04))
+            .background(color = Color(0xFF2C200A))
             .padding(2.dp)
     ) {
         Image(
@@ -32,18 +35,45 @@ fun FirstScreen(modifier: Modifier = Modifier) {
             contentScale = ContentScale.Crop,
             modifier = Modifier.fillMaxWidth()
         )
+        Spacer(modifier = Modifier.height(40.dp))
         Button(
             colors = ButtonColors(
-                containerColor = Color(0xD2B26536),
+                containerColor = Color(0xFF513D18),
                 contentColor = Color.White,
                 disabledContentColor = Color.White,
-                disabledContainerColor = Color(0xD2B26536)
+                disabledContainerColor = Color(0xFF513D18)
             ),
-            modifier = Modifier.fillMaxWidth(),
+            modifier = Modifier
+                .fillMaxWidth(0.6f)
+                .height(50.dp)
+                .align(Alignment.CenterHorizontally),
+
+
             onClick = {}
         ) {
             Text(
-                text = "Start",
+                text = "START",
+                color = Color.White
+            )
+        }
+        Spacer(modifier = Modifier.height(30.dp))
+        Button(
+            colors = ButtonColors(
+                containerColor = Color(0xFF513D18),
+                contentColor = Color.White,
+                disabledContentColor = Color.White,
+                disabledContainerColor = Color(0xFF513D18)
+            ),
+            modifier = Modifier
+                .fillMaxWidth(0.6f)
+                .height(50.dp)
+                .align(Alignment.CenterHorizontally),
+
+
+            onClick = {}
+        ) {
+            Text(
+                text = "ABOUT THE WRITTER",
                 color = Color.White
             )
         }
