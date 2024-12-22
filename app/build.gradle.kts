@@ -42,7 +42,6 @@ android {
 dependencies {
     implementation("androidx.navigation:navigation-compose:2.8.5")
     implementation("com.google.accompanist:accompanist-systemuicontroller:0.28.0")
-  //  implementation ("com.github.barteksc:android-pdf-viewer:3.2.0-beta.1")
 
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.lifecycle.runtime.ktx)
