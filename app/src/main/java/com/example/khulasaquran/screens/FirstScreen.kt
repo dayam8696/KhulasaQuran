@@ -20,6 +20,7 @@ import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.navigation.NavController
+import androidx.navigation.compose.rememberNavController
 import com.example.khulasaquran.R
 
 @Composable
@@ -82,6 +83,10 @@ fun FirstScreen(navController: NavController) {
 }
 
 
-
+@Preview(showBackground = true)
+@Composable
+fun firstscreenPreview() {
+    FirstScreen(navController = rememberNavController())
+}
 
 
