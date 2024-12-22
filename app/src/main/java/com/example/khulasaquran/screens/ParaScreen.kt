@@ -1,8 +1,10 @@
 package com.example.khulasaquran.screens
 
 import androidx.compose.foundation.background
+import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.PaddingValues
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
@@ -36,7 +38,7 @@ fun ParaScreen(navController: NavController) {
         bottomBar = {
             BottomNavigationBar(navController = navController)
         }
-    ) {paddingValues ->
+    ) { paddingValues ->
         Column(
             Modifier
                 .background(color = Color(0xFF968B76))
@@ -48,7 +50,9 @@ fun ParaScreen(navController: NavController) {
                 color = Color.Black
             )
             LazyColumn(
-                Modifier.fillMaxWidth().padding(vertical = 8.dp)
+                Modifier.fillMaxWidth().padding(vertical = 8.dp),
+                contentPadding = PaddingValues(bottom = 56.dp), // Adjust based on the height of the BottomNavigation
+                verticalArrangement = Arrangement.spacedBy(8.dp),
             ) {
                 items(30) {
                     ParaItem("Para ${it+1}")
