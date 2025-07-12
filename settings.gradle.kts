@@ -16,8 +16,11 @@ dependencyResolutionManagement {
     repositories {
         google()
         mavenCentral()
+        maven(url = java.net.URI("https://jitpack.io"))
+
     }
 }
 
 rootProject.name = "KhulasaQuran"
 include(":app")
+include(":android-pdf-viewer")

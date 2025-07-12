@@ -1,41 +1,42 @@
 package com.example.khulasaquran.screens
 
+import android.graphics.Color
 import android.os.Bundle
 import androidx.activity.ComponentActivity
+import androidx.activity.SystemBarStyle
 import androidx.activity.compose.setContent
-import androidx.compose.runtime.Composable
-import androidx.compose.runtime.SideEffect
+import androidx.activity.enableEdgeToEdge
+import androidx.compose.foundation.background
+import androidx.compose.foundation.layout.Box
+import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.foundation.layout.safeDrawingPadding
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.graphics.Color
-import androidx.navigation.compose.NavHost
-import androidx.navigation.compose.composable
-import androidx.navigation.compose.rememberNavController
-import com.example.khulasaquran.ui.theme.KhulasaQuranTheme
-import com.google.accompanist.systemuicontroller.rememberSystemUiController
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+
+        enableEdgeToEdge(
+            statusBarStyle = SystemBarStyle.dark(
+                scrim = Color.TRANSPARENT
+            ),
+            navigationBarStyle = SystemBarStyle.dark(
+                scrim = Color.TRANSPARENT
+            )
+        )
+
         setContent {
-            KhulasaQuranTheme {
-                 KhulasaQuranApp()
+            Box(
+                modifier = Modifier
+                    .fillMaxSize().background(androidx.compose.ui.graphics.Color(0xFF2F1E04))
+                    .safeDrawingPadding()
+            ){
+                KhulasaQuranApp()
             }
         }
     }
-
-    @Composable
-    fun KhulasaQuranApp(modifier: Modifier = Modifier) {
-        val navController = rememberNavController()
-        val systemUiController = rememberSystemUiController()
-        SideEffect {
-            systemUiController.setStatusBarColor(color = Color(0xFF2C200A))
-        }
-
-        NavHost(navController = navController, startDestination = "first_screen") {
-            composable("first_screen") { FirstScreen(navController) }
-            composable("para_screen") { ParaScreen(navController) }
-        }
-    }
 }
+
+
 
 
